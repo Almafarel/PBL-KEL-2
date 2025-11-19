@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Poppins:wght@300;400;500;600&display=swap');
+
 :root {
     --primary: #0E1F43;
     --secondary: #FEBE11;
@@ -34,6 +36,53 @@
     --space-6: 32px;
     --space-7: 48px;
 }
+
+/* =======================================
+   FONT FAMILY SETUP
+======================================= */
+
+html {
+    font-size: 16px;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    color: var(--text);
+    background: var(--bg);
+}
+
+h1, h2, h3, h4, h5, h6,
+.nav-title,
+.sidebar-title {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    color: var(--primary);
+}
+
+h1 {
+    font-size: 40px;
+}
+
+h2 {
+    font-size: 28px;
+}
+
+h3 {
+    font-size: 22px;
+}
+
+p, span, li {
+    font-size: 16px;
+}
+
+.small-text {
+    font-size: 12px;
+}
+
+.xs-text {
+    font-size: 10px;
+}
+
 
 * {
     margin: 0;
