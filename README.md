@@ -30,6 +30,7 @@ PROJECT FRONTEND GUIDELINE
    - arsip.html atau arsip.php
    - lainnya
 
+
 2. Aturan HTML dan PHP
    - Gunakan atribut data-* sebagai hook JavaScript, bukan class atau id.
    - Tidak diperbolehkan menggunakan inline JavaScript seperti onclick.
@@ -71,6 +72,7 @@ PROJECT FRONTEND GUIDELINE
     - Variabel global seperti spacing, radius, dan shadow
     - Pengaturan font untuk heading dan body
 
+
    3.2 layout.css
       Berisi struktur tata letak seperti:
       - Navbar
@@ -79,6 +81,7 @@ PROJECT FRONTEND GUIDELINE
       - Grid layout
       - Spacing layout (padding dan margin section)
       - Tidak diperbolehkan menambahkan komponen di sini.
+
 
    3.3 components.css
       Berisi komponen reusable seperti:
@@ -90,6 +93,7 @@ PROJECT FRONTEND GUIDELINE
       - Modal
       - Alert
       Komponen harus dapat digunakan di semua halaman.
+
       
       3.4 utils.css
       Berisi helper class yang dipakai untuk kondisi khusus dan styling cepat, seperti:
@@ -101,9 +105,11 @@ PROJECT FRONTEND GUIDELINE
       .gap-10
       .mt-20
       Utils tidak boleh menggantikan styling utama.
+
       
       3.5 responsive.css
       Semua aturan mobile dan tablet hanya ditulis di file ini, bukan dicampur dengan file lain.
+
 
   4. JavaScript Guideline
      4.1 Struktur utama
@@ -111,6 +117,7 @@ PROJECT FRONTEND GUIDELINE
         - navbar.js untuk logika navbar dan sidebar
         - theme.js untuk mode terang dan gelap
         - helpers untuk fungsi kecil seperti selector dan event handler
+
       
       4.2 main.js
         import { initNavbar } from "./navbar.js";
@@ -120,6 +127,7 @@ PROJECT FRONTEND GUIDELINE
             initNavbar();
             initTheme();
         });
+
       
       4.3 Aturan JavaScript
         - Gunakan const untuk nilai tetap, let untuk nilai yang berubah.
@@ -128,6 +136,7 @@ PROJECT FRONTEND GUIDELINE
         - Jangan memanipulasi style lewat JavaScript secara langsung, gunakan class.
         - Tidak diperbolehkan membuat variabel global.
         - selector harus menggunakan data-* bukan class.
+
       
   5. Naming Convention
       CSS
@@ -144,6 +153,7 @@ PROJECT FRONTEND GUIDELINE
       Folder
      - Gunakan nama lowercase
      - Gunakan dash, bukan underscore
+
       
   7. Quality Standard
       - Semua halaman harus memenuhi syarat berikut:
@@ -154,6 +164,7 @@ PROJECT FRONTEND GUIDELINE
       - Tidak diperbolehkan ada console.log di production
       - Gunakan Prettier untuk formatting
       - Semua gambar harus dioptimasi sebelum digunakan
+
       
   7. Template HTML Standar
       <!DOCTYPE html>
