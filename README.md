@@ -1,34 +1,34 @@
 PROJECT FRONTEND GUIDELINE
 
 1. Struktur Folder
-   project/
-  │
-  ├── assets/
-  │   ├── css/
-  │   │   ├── base.css
-  │   │   ├── layout.css
-  │   │   ├── components.css
-  │   │   ├── utils.css
-  │   │   ├── responsive.css
-  │   │   └── pages/
-  │   │       ├── landing.css
-  │   │       ├── profil.css
-  │   │       ├── arsip.css
-  │   │       └── lainnya
-  │   │
-  │   ├── js/
-  │   │   ├── main.js
-  │   │   ├── navbar.js
-  │   │   └── helpers/
-  │   │       ├── dom.js
-  │   │       ├── event.js
-  │   │       └── storage.js
-  │   │
-  │   ├── img/
-  │
-  ├── index.html atau index.php
-  ├── profil.html atau profil.php
-  └── arsip.html atau arsip.php
+   project
+      - assets
+           - css
+                - base.css
+                - layout.css
+                - components.css
+                - utils.css
+                - responsive.css
+                - pages
+                     - landing.css
+                     - profil.css
+                     - arsip.css
+                     - lainnya
+
+         - js
+              - main.js
+              - navbar.js
+              - helpers
+                   - dom.js
+                   - event.js
+                   - storage.js
+
+         - img
+
+   - index.html atau index.php
+   - profil.html atau profil.php
+   - arsip.html atau arsip.php
+   - lainnya
 
 2. Aturan HTML dan PHP
    - Gunakan atribut data-* sebagai hook JavaScript, bukan class atau id.
