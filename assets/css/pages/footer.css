@@ -8,7 +8,7 @@
 
 .footer-top {
     display: grid;
-    grid-template-columns: 350px 1fr 250px;
+    grid-template-columns: auto 1fr 250px;
     gap: 40px;
     align-items: flex-start;
     margin-bottom: 40px;
@@ -16,6 +16,7 @@
 
 .footer-image img {
     width: 100%;
+    max-width: 200px;
     height: auto;
     border-radius: var(--radius-md);
 }

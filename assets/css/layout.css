@@ -3,10 +3,13 @@
     background: var(--color-primary);
     color: #fff;
     padding: 0.75rem 1.5rem;
-
     display: flex;
     align-items: center;
     justify-content: space-between;
+    background: var(--primary);
+}
+:root {
+    --primary: #0E1F43;
 }
 
 .navbar-brand {
