@@ -10,114 +10,14 @@
   
   <!-- CSS Lokal -->
   <link rel="stylesheet" href="assets/css/pages/navbar.css">
-  <link rel="stylesheet" href="assets/css/pages/footer.css">
   <link rel="stylesheet" href="assets/css/pages/landing.css">
   <link rel="stylesheet" href="assets/css/base.css">
   <link rel="stylesheet" href="assets/css/components.css">
   <link rel="stylesheet" href="assets/css/layout.css">
   <link rel="stylesheet" href="assets/css/responsive.css">
   <link rel="stylesheet" href="assets/css/utils.css">
-  
-</head>
-<body>
 
-  <!-- Navbar -->
-  <nav class="navbar">
-    <div class="nav-container">
-      <div class="nav-left">
-        <img src="assets/img/Logo JTI.png" alt="Logo" class="nav-logo">
-        <div class="nav-brand">
-          <span class="brand-title">Network & Cyber Security</span>
-          <span class="brand-sub">Laboratorium</span>
-        </div>
-      </div>
-
-      <ul class="nav-menu">
-        <li><a href="index.html">Beranda</a></li>
-        <li><a href="profil.html">Profil</a></li>
-        <li class="dropdown">
-          <span class="dropdown-btn">Riset & Kegiatan ▾</span>
-          <ul class="dropdown-menu">
-            <li><a href="Bidang-Fokus.html">Bidang Fokus</a></li>
-            <li><a href="petaJalan.html">Peta Jalan</a></li>
-            <li><a href="arsip.html">Arsip</a></li>
-          </ul>
-        </li>
-        <li><a href="layanan.html">Layanan</a></li>
-        <li><a href="galeri.html">Galeri</a></li>
-      </ul>
-    </div>
-  </nav>
-
-  <!-- Header Section -->
-  <div class="header-section">
-    <a class="back-btn" onclick="history.back()"><i class="fa-solid fa-arrow-left"></i></a>
-    <h1>Nama Bidang Fokus</h1>
-  </div>
-
-  <!-- Main Content -->
-  <div class="content-wrapper">
-    <div class="detail-title">Evaluasi Keamanan Jaringan pada Sistem Informasi Akademik</div>
-
-    <!-- Section 1 -->
-    <div class="detail-section">
-      <div class="detail-text">
-        <h2>Overview</h2>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-        <ul class="detail-list">
-          <li><i class="fa-solid fa-check"></i> Proin mi urna, scelerisque sed sodales elementum</li>
-          <li><i class="fa-solid fa-check"></i> Gravida ac lecus, amet bibendum</li>
-          <li><i class="fa-solid fa-check"></i> Lorem ipsum dolor sit amet consectetur</li>
-        </ul>
-      </div>
-      <div class="detail-img">
-        <img src="assets/img/detail-1.jpg" alt="Detail Gambar 1">
-      </div>
-    </div>
-
-    <!-- Section 2 -->
-    <div class="detail-section reverse">
-      <div class="detail-text">
-        <h2>Metodologi Penelitian</h2>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-        <ul class="detail-list">
-          <li><i class="fa-solid fa-check"></i> Analisis kebutuhan sistem</li>
-          <li><i class="fa-solid fa-check"></i> Pengujian keamanan jaringan</li>
-          <li><i class="fa-solid fa-check"></i> Evaluasi vulnerabilitas</li>
-        </ul>
-      </div>
-      <div class="detail-img">
-        <img src="assets/img/detail-2.jpg" alt="Detail Gambar 2">
-      </div>
-    </div>
-
-    <!-- Section 3 -->
-    <div class="detail-section">
-      <div class="detail-text">
-        <h2>Hasil dan Implementasi</h2>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-        <ul class="detail-list">
-          <li><i class="fa-solid fa-check"></i> Peningkatan keamanan 95%</li>
-          <li><i class="fa-solid fa-check"></i> Respons time lebih cepat</li>
-          <li><i class="fa-solid fa-check"></i> Sistem lebih stabil</li>
-        </ul>
-      </div>
-      <div class="detail-img">
-        <img src="assets/img/detail-3.jpg" alt="Detail Gambar 3">
-      </div>
-    </div>
-
-    <!-- Back to List Button -->
-    <div class="back-to-list">
-      <a href="Bidang-Fokus.html" class="back-list-btn">
-        <i class="fa-solid fa-arrow-left"></i> Kembali 
-      </a>
-    </div>
-
-  </div>
-
-  <!-- CSS Khusus untuk Halaman Detail -->
-  <style>
+    <style>
     body {
     background: white url('assets/img/aura.png');
     background-repeat: space;
@@ -125,6 +25,7 @@
     background-position: center;
     margin: 0;
     padding: 0;
+    font: Arial sans-serif;
     }
 
     /* Header Section */
@@ -139,8 +40,17 @@
       flex-direction: column;
       align-items: center;
       justify-content: center;
-      min-height: 450px;
+      min-height: 400px;
     }
+
+    .header-subtitle {
+    font-size: 1.2rem;
+    margin: 0;
+    text-align: center;
+    opacity: 0.9;
+    font-weight: 400;
+    line-height: 1.5;
+}
 
     .header-section h1 {
       font-size: 60px !important;
@@ -297,6 +207,80 @@
       }
     }
   </style>
+  
+</head>
+<body>
+
+   <!-- Navbar placeholder -->
+  <div id="navbar-placeholder"></div>
+
+  <!-- Header Section -->
+  <div class="header-section">
+    <a class="back-btn" onclick="history.back()"><i class="fa-solid fa-arrow-left"></i></a>
+    <h1>Nama Bidang Fokus</h1>
+  </div>
+
+  <!-- Main Content -->
+  <div class="content-wrapper">
+    <div class="detail-title">Evaluasi Keamanan Jaringan pada Sistem Informasi Akademik</div>
+
+    <!-- Section 1 -->
+    <div class="detail-section">
+      <div class="detail-text">
+        <h2>Overview</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+        <ul class="detail-list">
+          <li><i class="fa-solid fa-check"></i> Proin mi urna, scelerisque sed sodales elementum</li>
+          <li><i class="fa-solid fa-check"></i> Gravida ac lecus, amet bibendum</li>
+          <li><i class="fa-solid fa-check"></i> Lorem ipsum dolor sit amet consectetur</li>
+        </ul>
+      </div>
+      <div class="detail-img">
+        <img src="assets/img/detail-1.jpg" alt="Detail Gambar 1">
+      </div>
+    </div>
+
+    <!-- Section 2 -->
+    <div class="detail-section reverse">
+      <div class="detail-text">
+        <h2>Metodologi Penelitian</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+        <ul class="detail-list">
+          <li><i class="fa-solid fa-check"></i> Analisis kebutuhan sistem</li>
+          <li><i class="fa-solid fa-check"></i> Pengujian keamanan jaringan</li>
+          <li><i class="fa-solid fa-check"></i> Evaluasi vulnerabilitas</li>
+        </ul>
+      </div>
+      <div class="detail-img">
+        <img src="assets/img/detail-2.jpg" alt="Detail Gambar 2">
+      </div>
+    </div>
+
+    <!-- Section 3 -->
+    <div class="detail-section">
+      <div class="detail-text">
+        <h2>Hasil dan Implementasi</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+        <ul class="detail-list">
+          <li><i class="fa-solid fa-check"></i> Peningkatan keamanan 95%</li>
+          <li><i class="fa-solid fa-check"></i> Respons time lebih cepat</li>
+          <li><i class="fa-solid fa-check"></i> Sistem lebih stabil</li>
+        </ul>
+      </div>
+      <div class="detail-img">
+        <img src="assets/img/detail-3.jpg" alt="Detail Gambar 3">
+      </div>
+    </div>
+
+    <!-- Back to List Button -->
+    <div class="back-to-list">
+      <a href="bidangFokus.html" class="back-list-btn">
+        <i class="fa-solid fa-arrow-left"></i> Kembali 
+      </a>
+    </div>
+
+  </div>
+    <script src="assets/js/navbar.js"></script>
 
 </body>
 </html>
