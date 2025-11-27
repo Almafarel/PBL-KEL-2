@@ -1,0 +1,440 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bidang Fokus - Network & Cyber Security Laboratory</title>
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+    <!-- CSS Lokal -->
+    <link rel="stylesheet" href="assets/css/pages/navbarAdmin.css">
+    <link rel="stylesheet" href="assets/css/pages/sidebar.css">
+    <link rel="stylesheet" href="assets/css/pages/landing.css">
+    <link rel="stylesheet" href="assets/css/base.css">
+    <link rel="stylesheet" href="assets/css/components.css">
+    <link rel="stylesheet" href="assets/css/layout.css">
+    <link rel="stylesheet" href="assets/css/responsive.css">
+    <link rel="stylesheet" href="assets/css/utils.css">
+    <link rel="stylesheet" href="tabelBidang.css">
+
+    <style>
+        body {
+            background: none;
+            background-position: center;
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            display: flex;
+            min-height: 100vh;
+        }
+
+        /* Layout */
+        .layout {
+            display: flex;
+            width: 100%;
+        }
+
+        /* Main Content */
+        .content {
+           flex: 1;
+      margin-left: 250px;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+        }
+
+        /* Header Section */
+        .header-section {
+    background: none;
+    background-size: cover;
+      color: #000;
+      padding: 36px 40px;
+      text-align: left;
+      position: relative;
+      display: flex;
+      flex-direction: flex-start;
+      align-items: center;
+      justify-content: flex-start;
+      min-height: 300px;
+    }
+
+         .back-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: none;
+            color: #000;
+            padding: 10px 18px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 24px;
+            transition: all 0.3s ease;
+            margin-bottom: 100px;
+        }
+
+        .back-btn:hover {
+            background: #FFD633;
+            transform: translateX(-3px);
+        }
+
+        .header-section h1 {
+    font-size: 40px !important;
+      margin: 0;
+      text-align: left;
+      font-weight: 700;
+      color: #000;
+        }
+
+    .search-container {
+    position: relative;
+    margin-left: 260px;
+    }
+
+.search-input {
+    padding: 12px 20px 12px 30px;
+    border-radius: 6px;
+    border: 1px solid #ddd;
+    font-size: 14px;
+    width: 250px;
+    transition: all 0.3s ease;
+    margin-left: 10px;
+    color: #000;
+    background-color: #d2d2d2;
+}
+
+.search-input:focus {
+    outline: none;
+    border-color: #FEBE11;
+    box-shadow: 0 0 0 2px rgba(254, 190, 17, 0.2);
+}
+
+.search-icon {
+    position: absolute;
+    left: 18px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #777;
+}
+
+.add-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: #FEBE11;
+    color: #000;
+    padding: 0;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 18px;
+    transition: all 0.3s ease;
+    margin-left: 35px;
+}
+
+.add-btn:hover {
+    background: #FFD633;
+    transform: translateY(-2px);
+}
+
+.add-btn i {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+}
+
+.divide {
+height: 3px;
+background: #FEBE11;
+width: 100px;
+margin-bottom: 20px;
+}
+
+* {
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+font-family: Poppins, sans-serif;
+        }
+
+        body {
+            background-color: #fff;
+            padding: 30px;
+        }
+
+        /* Sidebar Styles - */
+        .sidebar {
+      width: 250px;
+      background: #0E1F43;
+      color: white;
+      padding: 2rem 0;
+      position: fixed;
+      height: 100vh;
+      left: 0;
+      top: 0;
+      overflow-y: auto;
+        }
+
+        .sidebar-menu {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .sidebar-menu li {
+            margin: 0;
+        }
+
+        .sidebar-menu a {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      padding: 1rem 1.5rem;
+      color: #fff;
+      text-decoration: none;
+      transition: background 0.3s ease;
+      border-left: 4px solid transparent;
+        }
+
+        .sidebar-menu a:hover,
+        .sidebar-menu a.active {
+            background: #1a2d5a;
+            border-left: 4px solid #FEBE11;
+        }
+
+        .sidebar-menu i {
+            width: 20px;
+            text-align: center;
+        }
+
+        /* Responsive */
+        @media (max-width: 992px) {
+            .layout {
+                flex-direction: column;
+                margin-top: 120px; /* Lebih besar untuk navbar mobile */
+            }
+            
+            .sidebar {
+                width: 100%;
+                height: auto;
+                position: relative;
+                top: 0;
+            }
+            
+            .content {
+                margin-left: 0;
+                margin-top: 0;
+            }
+            
+            .nav-container {
+                flex-direction: column;
+                gap: 1rem;
+                height: auto;
+                padding: 1rem 0;
+            }
+            
+            .nav-menu {
+                width: 100%;
+                justify-content: center;
+            }
+
+            .focus-column {
+                flex-direction: column;
+                gap: 1.5rem;
+            }
+
+            .focus-image {
+                width: 100%;
+                flex: none;
+            }
+
+            .paragraph-btn-wrapper {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 0.5rem;
+            }
+        }
+ /* Back to save Button */
+   .save-container {
+    text-align: right;
+    margin-top: 550px;
+    margin-right: 40px;
+    padding-top: 2rem;
+}
+
+.save-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    background: #FEBE11;
+    color: #000;
+    padding: 12px 24px;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 16px;
+    transition: all 0.3s ease;
+}
+
+.save-btn:hover {
+    background: #fff;
+    transform: translateX(-5px);
+}
+
+        @media (max-width: 768px) {
+            .content {
+                padding: 1rem;
+            }
+            
+            .focus-item {
+                padding: 1.5rem;
+            }
+            
+            .page-header h1 {
+                font-size: 2rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+     <!-- Navbar -->
+    <nav class="navbarAdmin">
+        <div class="nav-container">
+            <div class="nav-left">
+                <img src="assets/img/Logo JTI.png" alt="Logo" class="nav-logo">
+                <div class="nav-brand">
+                    <span class="brand-title">Network & Cyber Security</span>
+                    <span class="brand-sub">Laboratorium</span>
+                </div>
+            </div>
+            <ul class="nav-menu">
+                <li class="nav-profile">
+                    <i class="fa-solid fa-user"></i>
+                    <span>Admin</span>
+                    <span>|</span>                   
+                </li>
+                <li class="nav-logout">
+                    <a href="logout.html">Logout</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Layout Container -->
+    <div class="layout">
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <ul class="sidebar-menu">
+                <li><a href="dashboard.html" class="nav-link">Dashboard</a></li>
+                <li><a href="profil.html" class="nav-link">Profil</a></li>
+                <li><a href="adminBidang-fokus.html" class="nav-link active">Bidang Fokus</a></li>
+                <li><a href="peta-jalan.html" class="nav-link">Peta Jalan</a></li>
+                <li><a href="layanan.html" class="nav-link">Layanan</a></li>
+                <li><a href="galeri.html" class="nav-link">Galeri</a></li>
+                <li><a href="arsip.html" class="nav-link">Arsip</a></li>
+            </ul>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="content">
+            <!-- Header Section -->
+            <div class="header-section">
+                <div style="display:flex; align-items:center; gap:18px;">
+                    <a href="dashboard.html" class="back-btn"><i class="fas fa-arrow-left"></i></a>
+                    <h1>Bidang Fokus</h1>
+                    <a href="tambah-bidang.html" class="add-btn" aria-label="Tambah"><i class="fas fa-plus"></i></a>
+                </div>
+
+                <div class="header-actions" style="margin-left:auto;">
+                    <div class="search-container">
+                        <i class="fas fa-search search-icon"></i>
+                        <input type="text" class="search-input" placeholder="Search">
+                    </div>
+                </div>
+            </div>
+
+            <!-- Tabel di bawah header -->
+            <div class="table-container">
+                <div class="table-header">
+                </div>
+            <table class="bidang-table">
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Gambar</th>
+                        <th>Judul</th>
+                        <th>Deskripsi</th>
+                        <th>Editor ID</th>
+                        <th>Aksi</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>1</td>
+                        <td>
+                            <div class="file-preview"></div>
+                        </td>
+                        <td>Lorem Ipsum</td>
+                        <td>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</td>
+                        <td>1</td>
+                        <td>
+                            <div class="action-buttons">
+                                <button class="btn-action btn-edit" title="Edit"></button>
+                                <button class="btn-action btn-delete" title="Delete"></button>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>
+                            <div class="file-preview"></div>
+                        </td>
+                        <td>Lorem Ipsum</td>
+                        <td>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</td>
+                        <td>2</td>
+                        <td>
+                            <div class="action-buttons">
+                                <button class="btn-action btn-edit" title="Edit"></button>
+                                <button class="btn-action btn-delete" title="Delete"></button>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                        <td>
+                            <div class="file-preview"></div>
+                        </td>
+                        <td>Lorem Ipsum</td>
+                        <td>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</td>
+                        <td>1</td>
+                        <td>
+                            <div class="action-buttons">
+                                <button class="btn-action btn-edit" title="Edit"></button>
+                                <button class="btn-action btn-delete" title="Delete"></button>
+                            </div>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+
+                <div style="display:flex; justify-content:flex-end; padding:20px;">
+                    <a href="tabelBidang.html" class="save-btn">Simpan</a>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <!-- Load Navbar & Sidebar JS -->
+    <script src="assets/js/headerSidebar.js"></script>
+    <script src="assets/js/navbar.js"></script>
+</body>
+</html>
