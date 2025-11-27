@@ -3,8 +3,8 @@
     background: var(--primary);
     color: #fff;
     padding: var(--space-6);
-    padding-top: 80px;
-        /* buat atasin */
+    padding-top: 160px;
+    margin-top: -120px;  /* buat atasin */
 }
 
 .tentangKami-container{
@@ -160,9 +160,9 @@
 
 .pengelolaLab-card {
     display: flex;
-    gap: 55px ; 
+    gap: 25px ; 
     transition: transform 0.4s ease-in-out;
-    
+    justify-content: center;
 }
 
 .card-name {
@@ -241,11 +241,11 @@
 }
 
 .arrow-left {
-    left: -40px;
+    left: -10px;
 }
 
 .arrow-right {
-    right: -40px;
+    right: -10px;
 }
 
 
@@ -255,7 +255,61 @@
 }
 
 
-/* tambahan */
-body:not(.no-header) {
-    padding-top: 83px !important;
+
+
+/* buat navbar */
+
+/* Navbar transparan */
+.navbar:not(.scrolled) .nav-menu a,
+.navbar:not(.scrolled) .nav-brand .brand-title,
+.navbar:not(.scrolled) .nav-brand .brand-sub,
+.navbar:not(.scrolled) .dropdown-btn,
+.navbar:not(.scrolled) .nav-menu li span,
+.navbar:not(.scrolled) .nav-menu li i {
+    color: #ffffff !important;  
+    transition: 0.3s ease;
 }
+
+/* Hover untuk navbar transparan → tetap putih */
+.navbar:not(.scrolled) .nav-menu a:hover,
+.navbar:not(.scrolled) .dropdown-btn:hover,
+.navbar:not(.scrolled) .nav-menu li span:hover,
+.navbar:not(.scrolled) .nav-menu li i:hover {
+    color: #ffffff !important;
+}
+
+/* Dropdown default tetap hitam saat navbar transparan */
+.navbar:not(.scrolled) .dropdown-menu li a {
+    color: var(--gray-900) !important;
+}
+
+/* Hover dropdown tetap hitam saat navbar transparan */
+.navbar:not(.scrolled) .dropdown-menu li a:hover {
+    color: #000000 !important;
+}
+
+.navbar.scrolled {
+    background: rgba(255, 255, 255, 0.98) !important;
+    backdrop-filter: blur(6px);
+}
+
+/* Semua tulisan berubah jadi primary saat scroll */
+.navbar.scrolled .nav-menu a,
+.navbar.scrolled .nav-menu li span,
+.navbar.scrolled .nav-menu li i,
+.navbar.scrolled .nav-brand .brand-title,
+.navbar.scrolled .nav-brand .brand-sub,
+.navbar.scrolled .dropdown-btn,
+.navbar.scrolled .dropdown-menu li a {
+    color: var(--primary) !important;
+}
+
+/* Hover saat navbar scrolled → hitam semua */
+.navbar.scrolled .nav-menu a:hover,
+.navbar.scrolled .nav-menu li span:hover,
+.navbar.scrolled .nav-menu li i:hover,
+.navbar.scrolled .dropdown-btn:hover,
+.navbar.scrolled .dropdown-menu li a:hover {
+    color: #000000 !important;
+}
+

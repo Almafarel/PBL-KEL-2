@@ -4,49 +4,23 @@ export function initPengelolaSlider() {
     const btnRight = document.querySelector("[data-arrow='right']");
 
     let cards = Array.from(slider.querySelectorAll(".card-name"));
-    const cardWidth = 250 + 53; // width + gap
-
-    slider.style.display = "flex";
-    slider.style.transition = "transform 0.5s ease";
 
     function render() {
         slider.innerHTML = "";
         cards.forEach(card => slider.appendChild(card));
     }
 
-    // ROTASI KANAN (geser ke depan)
+    // ROTASI KANAN
     btnRight.addEventListener("click", () => {
-        // geser dulu dengan animasi
-        slider.style.transform = `translateX(-${cardWidth}px)`;
-
-        // setelah animasi selesai
-        slider.addEventListener("transitionend", function handler() {
-            slider.style.transition = "none"; // matikan transisi sementara
-            const first = cards.shift();
-            cards.push(first);
-            render();
-            slider.style.transform = `translateX(0)`; // reset posisi
-            // biar animasi jalan lagi
-            setTimeout(() => {
-                slider.style.transition = "transform 0.5s ease";
-            });
-            slider.removeEventListener("transitionend", handler);
-        });
+        const first = cards.shift(); // ambil kartu pertama
+        cards.push(first);           // taruh di akhir
+        render();                     // tampilkan ulang
     });
 
-    // ROTASI KIRI (geser ke belakang)
+    // ROTASI KIRI
     btnLeft.addEventListener("click", () => {
-        // taruh last di depan dulu tanpa animasi
-        slider.style.transition = "none";
-        const last = cards.pop();
-        cards.unshift(last);
-        render();
-        slider.style.transform = `translateX(-${cardWidth}px)`;
-
-        // animasi geser ke 0
-        setTimeout(() => {
-            slider.style.transition = "transform 0.5s ease";
-            slider.style.transform = `translateX(0)`;
-        });
+        const last = cards.pop();    // ambil kartu terakhir
+        cards.unshift(last);         // taruh di awal
+        render();                     // tampilkan ulang
     });
 }
