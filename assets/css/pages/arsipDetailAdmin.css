@@ -1,0 +1,226 @@
+.arsip-hero {
+    width: 100%;
+    background: #0E1F43;      /* navy sesuai screenshot */
+    text-align: center;
+    padding: 100px 0 50px;     /* tinggi sama seperti gambar */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 70px 0;
+    .arsip-hero {
+    margin-left: 220px; /* sama seperti konten utama */
+}
+}
+
+.arsip-hero {
+    background: #0E1F43;
+    padding: 50px 0;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.arsip-hero h1 {
+    color: white;
+    font-size: 36px;
+    margin: 0;
+    font-weight: 700;
+}
+
+/* ========= ARSIP HERO (Header Biru di Atas) ========= */
+.arsip-title-header {
+    width: 100%;
+    background: #0E1F43;
+    padding: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 0;
+    padding-top: 60px; /* atau sesuaikan tinggi navbar Anda */
+
+    /* offset sidebar */
+    margin-left: 0px;
+}
+body {
+    margin: 0;
+    padding: 0;
+}
+.arsip-title-header h1 {
+    color: #ffffff;
+    font-size: 40px;
+    font-weight: 700;
+    margin: 0;
+}
+
+.arsip-main {
+    margin-top: 0;
+    padding-top: 0;
+}
+
+/* Responsif sidebar hilang → margin-left juga hilang */
+@media (max-width: 768px) {
+    .arsip-title-header {
+        margin-left: 0;
+        padding: 40px 0;
+    }
+}
+
+
+@media(max-width: 768px) {
+    .arsip-main {
+        margin-left: 0;
+        margin-top: 100px; 
+        padding: 15px;
+    }
+}
+
+.page-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: var(--space-6);
+}
+
+.back-button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: var(--space-2);
+    margin-bottom: var(--space-5);
+    display: flex;
+    align-items: center;
+    color: var(--gray-700);
+    transition: transform 0.2s;
+    position: relative;
+    width: 40px;
+    height: 40px;
+}
+
+.back-button:hover {
+    transform: translateX(-4px);
+}
+
+.back-button::before {
+    content: '';
+    position: absolute;
+    width: 12px;
+    height: 12px;
+    border-left: 2px solid currentColor;
+    border-bottom: 2px solid currentColor;
+    transform: rotate(45deg);
+    left: 50%;
+    top: 50%;
+    margin-left: -4px;
+    margin-top: -6px;
+}
+
+.event-card {
+    background: white;
+    border-radius: var(--radius-xl);
+    padding: var(--space-6);
+    box-shadow: var(--shadow);
+    display: grid;
+    grid-template-columns: 1fr auto;
+    gap: var(--space-6);
+     overflow: hidden;
+}
+
+/* ========== KIRI (Teks) ========== */
+.event-left {
+    display: flex;
+    flex-direction: column;
+}
+
+.event-title {
+    font-size: var(--h2-size);
+    font-family: var(--font-title);
+    font-weight: 600;
+    color: var(--primary);
+    margin-bottom: var(--space-4);
+}
+
+.event-description {
+    font-size: var(--small-size);
+    color: var(--gray-600);
+    line-height: 1.6;
+    margin-bottom: var(--space-5);
+}
+
+.event-info {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.info-label {
+    font-weight: 600;
+    margin-right: 6px;
+}
+
+/* ========== KANAN ========== */
+.event-right {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: var(--space-4);
+}
+
+.event-thumbnail-small {
+    width: 110px;
+    height: 110px;
+    background: #d1d1d1;
+    border-radius: var(--radius-md);
+}
+
+/* BUTTON */
+.download-button {
+    background-color: var(--primary);
+    color: white;
+    border: none;
+    border-radius: var(--radius-md);
+    padding: 10px 20px;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    cursor: pointer;
+    font-size: var(--small-size);
+    font-weight: 600;
+    transition: 0.2s;
+}
+
+.download-button:hover {
+    background: #0E1F43;
+}
+
+/* ========== GAMBAR BESAR DI BAWAH ========== */
+.event-image-large {
+    grid-column: 1 / -1;
+    max-width: 100%;
+    aspect-ratio: 16/9;
+    background: #d1d1d1;
+    border-radius: var(--radius-lg);
+    margin-top: var(--space-4);
+    object-fit: cover;
+}
+
+/* ========== RESPONSIVE ========== */
+@media(max-width:768px){
+    .event-card {
+        grid-template-columns: 1fr;
+    }
+
+    .event-right {
+        align-items: flex-start;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .event-thumbnail-small {
+        width: 90px;
+        height: 90px;
+    }
+
+    .event-image-large {
+        height: 250px;
+    }
+}
