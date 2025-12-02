@@ -66,11 +66,13 @@ while ($row = pg_fetch_assoc($res)) {
 
                             <p><?= htmlspecialchars($row['deskripsi']) ?></p>
 
-                            <a class="btn"
-                               href="uploads/<?= htmlspecialchars($row['file_path']) ?>"
-                               target="_blank">
-                                <i class="fa-solid fa-download"></i> Lihat File
-                            </a>
+                            <div class="lihat-file">
+                                <a class="btn file-btn"
+                                    href="uploads/<?= htmlspecialchars($row['file_path']) ?>"
+                                    target="_blank">
+                                    <i class="fa-solid fa-download"></i> Lihat File
+                                </a>
+                            </div>
 
                         </div>
                     </div>
