@@ -176,17 +176,18 @@
     font-family: var(--font-title);
     font-size: 20px;
     font-weight: 700;
-    margin-bottom: 15px;
-    color: #fff;
+    margin-top: 20px;
+    color: #ffffff;
     text-align: center;
 }
 
 .timeline-card p,
 .timeline-card ul li {
-    font-size: 14px;
+    font-size: 15px;
     line-height: 1.9;
     color: #e6e6e6;
     text-align: left;
+    margin-top: 15px;
 }
 
 .timeline-card ul {
@@ -232,10 +233,11 @@
 
 .file-btn {
     position: absolute;
-    bottom: 20px;    /* MEPET DI BAWAH */
+    bottom: 20px;    
     left: 50%;
     transform: translateX(-50%);
     width: max-content;
+    font-weight: 600;
 }
 
 body {
